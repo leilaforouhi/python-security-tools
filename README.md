@@ -1,4 +1,4 @@
-import secrets
+import secret
 import string
 
 def create_password(length=16):
