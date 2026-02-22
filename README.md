@@ -1,2 +1,9 @@
-# python-security-tools
-A simple script to generate secure and random passwords using Python
+import secrets
+import string
+
+def create_password(length=16):
+    characters = string.ascii_letters + string.digits + string.punctuation
+    password = ''.join(secrets.choice(characters) for _ in range(length))
+    return password
+
+print(f"Your secure password: {create_password()}")
